@@ -1,3 +1,4 @@
+import { LinkList } from "./LinkedListSort"
 import { NumbersCollections} from "./NumbersCollections"
 import { Sorter } from "./Sorter"
 import { StringCollections } from "./StringCollections"
@@ -10,4 +11,15 @@ sorter.sort()
 const sorterString = new Sorter(stringSort)
 sorterString.sort()
 console.log(`sorterString`, sorterString)
+const linkList = new LinkList()
+
+for (let i = 0; i <= 20; i++) {
+    linkList.add(Math.floor(Math.random() * 10))
+}
+// console.log(`linkList`, linkList)
 // console.log(`sorter`, numbersCollections.data)
+
+const linkSort = new Sorter(linkList)
+linkSort.sort()
+linkList.print()
+console.log(`linkList`, linkList)
